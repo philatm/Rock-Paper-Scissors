@@ -4,9 +4,9 @@ let variants = {
   3: 'scissors',
 };
 
-let game = () => {
+let game = (userChoice) => {
   let computerChoice = Math.floor(Math.random()*3 + 1);
-  let userChoice = +prompt("Choose your variant:\n1 - rock\n2 - paper\n3 - scissors");
+  //let userChoice = +prompt("Choose your variant:\n1 - rock\n2 - paper\n3 - scissors");
   let resBegin = "It's " + variants[userChoice] + ' vs ' + variants[computerChoice] + ".";
   let result;
   if (userChoice == computerChoice) {
@@ -22,4 +22,3 @@ let game = () => {
   }
   console.log(resBegin + " " + result);
 }
-game();
