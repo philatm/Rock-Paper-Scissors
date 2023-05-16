@@ -1,0 +1,12 @@
+.container {
+    width: 720px;
+    margin: 0 auto;
+}
+button img {
+    width: 150px;
+    height: 210px;
+}
+.choices {
+    display: flex;
+    justify-content: space-between;
+}
