@@ -13,12 +13,15 @@
         <button onclick="makeUserChoice(2)">Paper</button>
         <button onclick="makeUserChoice(3)">Scissors</button>
     </div>
+    <div class="results">
+
+    </div>
     
 </body>
 <script src="./js/main.js"></script>
 <script>
     let makeUserChoice = (userChoice) => {
-        game(userChoice);
+        document.querySelector(".results").textContent = round(userChoice);
     }
 </script>
 </html>
