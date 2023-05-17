@@ -2,11 +2,43 @@
     width: 720px;
     margin: 0 auto;
 }
-button img {
+button img, img {
     width: 150px;
     height: 210px;
 }
+
+button {
+    border-width: 0;
+}
 .choices {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.title {
+    text-align: center;
+}
+
+.results {
+    display: flex;
+    align-items: center;
+    margin-top: 140px;
+    flex-direction: column;
+}
+
+.img-result {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.vs {
+    display: flex;
+    align-items: center;
+}
+
+.text-result {
+    font-size: 36px;
+    color: rgb(12, 67, 185);
+    margin-top: 20px;
 }

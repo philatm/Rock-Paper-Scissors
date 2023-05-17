@@ -9,21 +9,33 @@
 </head>
 <body>
     <div class="container">
-        <h1>Rock, Paper, Scissors</h1>
+        <h1 class="title">Rock, Paper, Scissors</h1>
         <div class="choices">
             <button onclick="makeUserChoice(1)"><img src="./img/rock.jpeg" alt="Rock"></button>
             <button onclick="makeUserChoice(2)"><img src="./img/paper.jpeg" alt="Paper"></button>
             <button onclick="makeUserChoice(3)"><img src="./img/scissors.jpeg" alt="Scissors"></button>
         </div>
         <div class="results">
-
+            <div class="img-result">
+                <div class="player">
+                    <img src="./img/rock.jpeg" alt="Rock">
+                </div>
+                <div class="vs">VS</div>
+                <div class="computer">
+                    <img src="./img/scissors.jpeg" alt="Scissors">
+                </div>
+            </div>
+            <div class="text-result">
+                You are won!
+            </div>
         </div>
     </div>
 </body>
 <script src="./js/main.js"></script>
 <script>
     let makeUserChoice = (userChoice) => {
-        document.querySelector(".results").textContent = round(userChoice);
+        let divResult = document.querySelector(".results");// = round(userChoice);
+        
     }
 </script>
 </html>
