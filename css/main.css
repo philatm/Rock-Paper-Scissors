@@ -9,7 +9,9 @@ button img, img {
 
 button {
     border-width: 0;
+    padding: 0;
 }
+
 .choices {
     display: flex;
     justify-content: space-around;
@@ -41,7 +43,4 @@ button {
     font-size: 36px;
     color: rgb(12, 67, 185);
     margin-top: 20px;
-}
-.player, .computer{
-    transition: all 1s ease-out;
 }

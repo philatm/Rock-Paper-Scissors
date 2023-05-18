@@ -35,6 +35,7 @@
 <script>
     let makePlayerChoice = (playerChoice) => {
         let divImgResult = document.querySelector(".img-result");
+
         let plDiv = divImgResult.firstElementChild;
         plDiv.innerHTML = "";
         let compDiv = divImgResult.lastElementChild;
@@ -42,7 +43,6 @@
 
         let textDiv = document.querySelector(".text-result");
         
-
         let resObj = round(playerChoice);
         let { plString, compString, result } = resObj;
 
@@ -50,6 +50,10 @@
         imgPlayer.src = `./img/${plString}.jpeg`;
         imgPlayer.alt = `${plString[0].toUpperCase()}${plString.slice(1)}`;
         plDiv.insertAdjacentElement("afterbegin", imgPlayer);
+        imgPlayer.style.opacity = 0;
+        window.getComputedStyle(imgPlayer).opacity;
+        imgPlayer.style.opacity = 1;
+
 
         let imgComputer= document.createElement('img');
         imgComputer.src = `./img/${compString}.jpeg`;
