@@ -42,3 +42,6 @@ button {
     color: rgb(12, 67, 185);
     margin-top: 20px;
 }
+.player, .computer{
+    transition: all 1s ease-out;
+}
