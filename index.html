@@ -59,6 +59,10 @@
         imgComputer.src = `./img/${compString}.jpeg`;
         imgComputer.alt = `${compString[0].toUpperCase()}${compString.slice(1)}`;
         compDiv.insertAdjacentElement("afterbegin", imgComputer);
+        imgComputer.style.opacity = 0;
+        window.getComputedStyle(imgPlayer).opacity;
+        imgComputer.style.opacity = 1;
+
 
         textDiv.textContent = result;
 
