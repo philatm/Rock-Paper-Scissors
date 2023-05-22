@@ -4,6 +4,8 @@ const variants = {
   3: 'scissors',
 };
 
+let plWins = 0;
+let compWins = 0; 
 const round = (playerChoice) => {
   let computerChoice = Math.floor(Math.random()*3 + 1);
   //let userChoice = +prompt("Choose your variant:\n1 - rock\n2 - paper\n3 - scissors");
@@ -12,12 +14,16 @@ const round = (playerChoice) => {
   if (playerChoice == computerChoice) {
     result = "It's a draw";
   } else if (playerChoice == 1 && computerChoice == 3) {
+    plWins += 1;
     result = "You're a winner!";
   } else if(playerChoice == 3 && computerChoice == 1) {
+    compWins += 1;
     result = "You lost. Try again";
   } else if (playerChoice > computerChoice) {
+    plWins += 1;
     result = "You're a winner";
   } else {
+    compWins += 1;
     result = "You lost. Try again";
   }
   let resObj = {
@@ -29,7 +35,16 @@ const round = (playerChoice) => {
 }
 
 const makePlayerChoice = (playerChoice) => {
+  let resObj = round(playerChoice);
+  let { plString, compString, result } = resObj;
+  
   let divImgResult = document.querySelector(".img-result");
+
+  let scoreDiv = document.querySelector(".score");
+  scoreDiv.classList.remove("hidden");
+
+  let vsDiv = document.querySelector(".vs");
+  vsDiv.classList.remove("hidden");
 
   let plDiv = divImgResult.firstElementChild;
   plDiv.innerHTML = "";
@@ -37,9 +52,8 @@ const makePlayerChoice = (playerChoice) => {
   compDiv.innerHTML = "";
 
   let textDiv = document.querySelector(".text-result");
-  
-  let resObj = round(playerChoice);
-  let { plString, compString, result } = resObj;
+
+  scoreDiv.textContent = `Score: ${plWins} - ${compWins}`;
 
   let imgPlayer = document.createElement('img');
   imgPlayer.src = `./img/${plString}.jpeg`;
@@ -59,9 +73,8 @@ const makePlayerChoice = (playerChoice) => {
   window.getComputedStyle(imgPlayer).opacity;
   imgComputer.style.opacity = 1;
 
-  let vsDiv = document.querySelector(".vs");
-  vsDiv.classList.remove("vs-hidden");
-  
+
+
   textDiv.textContent = result;
 }
 

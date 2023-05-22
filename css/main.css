@@ -28,6 +28,10 @@ button {
     flex-direction: column;
 }
 
+.score {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
 .img-result {
     display: flex;
     justify-content: space-around;
@@ -39,7 +43,7 @@ button {
     align-items: center;
 }
 
-.vs-hidden{
+.hidden{
     visibility: hidden;
 }
 
