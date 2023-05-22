@@ -39,12 +39,10 @@ const makePlayerChoice = (playerChoice) => {
   let { plString, compString, result } = resObj;
   
   let divImgResult = document.querySelector(".img-result");
-
+  let resultsDiv = document.querySelector(".results");
+  resultsDiv.classList.remove("hidden");
   let scoreDiv = document.querySelector(".score");
-  scoreDiv.classList.remove("hidden");
 
-  let vsDiv = document.querySelector(".vs");
-  vsDiv.classList.remove("hidden");
 
   let plDiv = divImgResult.firstElementChild;
   plDiv.innerHTML = "";
@@ -64,7 +62,6 @@ const makePlayerChoice = (playerChoice) => {
   window.getComputedStyle(imgPlayer).opacity;
   imgPlayer.style.opacity = 1;
 
-
   let imgComputer= document.createElement('img');
   imgComputer.src = `./img/${compString}.jpeg`;
   imgComputer.alt = `${compString[0].toUpperCase()}${compString.slice(1)}`;
@@ -72,8 +69,6 @@ const makePlayerChoice = (playerChoice) => {
   imgComputer.style.opacity = 0;
   window.getComputedStyle(imgPlayer).opacity;
   imgComputer.style.opacity = 1;
-
-
 
   textDiv.textContent = result;
 }

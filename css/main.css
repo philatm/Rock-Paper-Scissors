@@ -1,3 +1,7 @@
+* {
+    transition: all 0.5s ease-out;
+}
+
 .container {
     width: 720px;
     margin: 0 auto;
@@ -7,7 +11,7 @@ button img, img {
     height: 210px;
 }
 
-button {
+.choices button {
     border-width: 0;
     padding: 0;
 }
@@ -24,13 +28,30 @@ button {
 .results {
     display: flex;
     align-items: center;
-    margin-top: 140px;
+    margin-top: 90px;
     flex-direction: column;
 }
 
+.new-game-button {
+    background-color: #008CBA;
+    border: 2px solid #008CBA;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.new-game-button:hover {
+    background-color: white;
+    color: black;
+    
+}
 .score {
-    margin-bottom: 20px;
-    font-size: 24px;
+    /*margin-bottom: 20px;*/
+    color: red;
 }
 .img-result {
     display: flex;
@@ -53,6 +74,3 @@ button {
     margin-top: 20px;
 }
 
-img {
-    transition: all 0.5s ease-out;
-}
