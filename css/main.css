@@ -39,6 +39,10 @@ button {
     align-items: center;
 }
 
+.vs-hidden{
+    visibility: hidden;
+}
+
 .text-result {
     font-size: 36px;
     color: rgb(12, 67, 185);
@@ -46,5 +50,5 @@ button {
 }
 
 img {
-    transition: all 5s ease-out;
+    transition: all 0.5s ease-out;
 }

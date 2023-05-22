@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Rock, Paper, Scissors game</title>
 </head>
+
 <body>
     <div class="container">
         <h1 class="title">Rock, Paper, Scissors</h1>
@@ -18,54 +19,18 @@
         <div class="results">
             <div class="img-result">
                 <div class="player">
-                    <img src="./img/rock.jpeg" alt="Rock">
+                    <!-- <img src="./img/rock.jpeg" alt="Rock"> -->
                 </div>
-                <div class="vs">VS</div>
+                <div class="vs vs-hidden">VS</div>
                 <div class="computer">
-                    <img src="./img/scissors.jpeg" alt="Scissors">
+                    <!-- <img src="./img/scissors.jpeg" alt="Scissors"> -->
                 </div>
             </div>
             <div class="text-result">
-                You are won!
+                <!-- You are won! -->
             </div>
         </div>
     </div>
 </body>
 <script src="./js/main.js"></script>
-<script>
-    let makePlayerChoice = (playerChoice) => {
-        let divImgResult = document.querySelector(".img-result");
-
-        let plDiv = divImgResult.firstElementChild;
-        plDiv.innerHTML = "";
-        let compDiv = divImgResult.lastElementChild;
-        compDiv.innerHTML = "";
-
-        let textDiv = document.querySelector(".text-result");
-        
-        let resObj = round(playerChoice);
-        let { plString, compString, result } = resObj;
-
-        let imgPlayer = document.createElement('img');
-        imgPlayer.src = `./img/${plString}.jpeg`;
-        imgPlayer.alt = `${plString[0].toUpperCase()}${plString.slice(1)}`;
-        plDiv.insertAdjacentElement("afterbegin", imgPlayer);
-        imgPlayer.style.opacity = 0;
-        window.getComputedStyle(imgPlayer).opacity;
-        imgPlayer.style.opacity = 1;
-
-
-        let imgComputer= document.createElement('img');
-        imgComputer.src = `./img/${compString}.jpeg`;
-        imgComputer.alt = `${compString[0].toUpperCase()}${compString.slice(1)}`;
-        compDiv.insertAdjacentElement("afterbegin", imgComputer);
-        imgComputer.style.opacity = 0;
-        window.getComputedStyle(imgPlayer).opacity;
-        imgComputer.style.opacity = 1;
-
-
-        textDiv.textContent = result;
-
-  }
-</script>
 </html>
